@@ -1,0 +1,20 @@
+.about-main{
+    width: 100%;
+    color: #dddddd;
+    padding: 0;
+    background: green;
+}
+
+.about-main .container-title{
+    width: 100%;
+    height: auto;
+    padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    background-image: url("./img/background-metal-escuro.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}

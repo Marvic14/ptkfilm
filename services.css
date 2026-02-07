@@ -1,7 +1,4 @@
 
-.--branco{
-    color: #fff;
-}
 
 
 .services-main{
@@ -13,9 +10,6 @@
     align-items: center;
 }
 
-.center{
-    text-align: center;
-}
 
 
 .services-main span{
@@ -82,7 +76,7 @@
 }
 
 .container-swiper{
-    margin-bottom: 100px;
+    margin-bottom: 50px;
 }
 
 .swiper-slide {
@@ -176,6 +170,29 @@
 
 /* MOBILE */
 @media (max-width: 768px) {
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        width: 50px;
+        height: 50px;
+        padding: 4px;
+
+        /* 2. Cor de fundo e forma */
+        background-color: rgba(0, 224, 254, 0.3);
+        border-radius: 100%;
+
+        /* 3. Sombra para dar profundidade e o aspecto "fofo" */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+        /* 5. Transição suave ao passar o mouse */
+        transition: all 0.3s ease;
+    }
+
+    .swiper {
+        --swiper-navigation-size: 35px; /* Valor padrão costuma ser 44px */
+        font-weight: bold;
+        --swiper-navigation-color: #fff;
+    }
     .service-card {
         grid-template-columns: 1fr;
         text-align: center;

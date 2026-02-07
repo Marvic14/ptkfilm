@@ -219,8 +219,8 @@ nav ul li a {
         left: 0;
         width: 100%;
         max-width: 300px;
-        height: 72vh;
-        background: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(190, 30, 45, 0.75), rgba(255, 50, 50, 1));
+        height: auto;
+        background: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(190, 30, 45, 1), rgba(255, 50, 50, 1));
         z-index: 999;
         padding: 0;
         border-right: 2px solid var(--primary-red);
@@ -252,17 +252,21 @@ nav ul li a {
         list-style: none;
         display: flex;
         flex-direction: column;
-        border: 1px solid white;
         border-radius: 0 10px 10px 0;
         gap: 0;
         text-align: center;
     }
     .nav-gaveta ul li {
         width: 100%;
-        padding: 70px;
-        border-bottom: 1px solid white;
-
+        padding: 50px 30px;
+        border-bottom: 1px solid #dddddd;
     }
+
+    .nav-gaveta ul li:last-child {
+        border-bottom: none;
+    }
+
+
 
     .nav-gaveta ul li a {
         display: block;
