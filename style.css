@@ -1,0 +1,499 @@
+/* CONFIGURAÇÕES DO BODY E PÁGINA */
+
+:root {
+    --dark-bg: #0a0a0a;
+    --text-white: #ffffff;
+    --primary-red: #e60000;
+    --primary-green-gradient: linear-gradient(
+            to bottom,
+            #3ccf5e 0%,
+            #2fbf4a 45%,
+            #1f9e3a 100%
+    );
+
+}
+
+/* CONFIGURAÇÕES DO BODY E PÁGINA */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: var(--dark-bg);
+    color: var(--text-white);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.web-application{
+    max-width: 1520px;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.web-application > *:not(:nth-child(-n + 2)) {
+    margin-top: 100px;
+}
+
+
+
+/* -----------------  SEÇÃO PRINCIPAL  -------------------*/
+.principal {
+    position: relative;
+    background-image: url("./img/Home-Background.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+
+}
+
+.hero {
+    display: flex;
+}
+
+/* CONTEÚDO */
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 120vh;
+    padding-left: 80px;
+}
+
+/* IMAGEM */
+.hero-image {
+    width: 100%;
+    display: flex;
+    align-items: flex-end;   /* ancora embaixo */
+    justify-content: center;
+
+}
+
+/* CARRO */
+.hero-image img {
+    width: 100%;
+    max-width: 920px;        /* evita carro gigante */
+    height: auto;
+    object-fit: contain;
+}
+
+.hero .sub-text{
+    margin-left: 30px;
+    color: #dddddd;
+}
+
+.hero-content button{
+    margin-bottom: 15px;
+}
+
+
+.hero-content h1 {
+    font-size: 4rem;
+    line-height: 1.5;
+    background: rgba(0,0,0,0.1);
+    padding: 0 15px;
+    border-radius: 5px;
+}
+
+.hero-content h1 span {
+    color: var(--primary-red);
+    display: block;
+}
+
+.hero-content p{
+    margin-left: 10px;
+}
+
+.btn-cta {
+    position: relative;
+    width: fit-content;
+    align-self: flex-start;
+    border: 0;
+    background: var(--primary-green-gradient);
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 8px;
+    display: inline-block;
+    font-weight: bold;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.btn-cta .whatsapp-button{
+    width: 23px;
+    position: absolute;
+    bottom: 10px;
+    left: 5px;
+
+}
+/* ------------  SECTION STATS - PROPAGANDAS ----------  */
+.stats {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 40px;
+    background: #111;
+    border-top: 1px solid #333;
+    text-align: center;
+}
+
+.stat-item span{
+    color: #fff;
+    font-weight: bold;
+}
+.stats .stat-item{
+    color: #dddddd;
+    position: relative;
+}
+
+.stats .stat-item i{
+    font-size: 25px;
+}
+
+
+.stats .stat-item:nth-child(1)::after{
+    position: absolute;
+    bottom: 0;
+    right: -100%;
+    content: "";
+    width: 1px;
+    height: 100%;
+    background: rgba(255,255,255,0.3);
+}
+
+.stats .stat-item:nth-child(2)::after{
+    position: absolute;
+    bottom: 0;
+    right: -100%;
+    content: "";
+    width: 1px;
+    height: 100%;
+    background: rgba(255,255,255,0.3);
+}
+
+
+/* ------------------------ SEÇÃO DE SERVIÇOS -----------------------*/
+.services{
+    padding: 30px 0;
+}
+
+.services h2{
+    display: inline-block;
+    font-size: 48px;
+    font-weight: normal;
+    padding: 12px;
+    border-radius: 3px;
+    margin: 40px 10% 40px 10%;
+    background-color: rgba(187, 144, 4, 66%);
+
+}
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 40px 10%;
+}
+
+.service-card {
+    background: #1a1a1a;
+    padding: 40px 10px;
+    border-radius: 10px;
+    text-align: center;
+
+}
+
+.service-card img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.service-card button {
+    background: var(--primary-red);
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    cursor: pointer;
+}
+
+/* --------------  INFO SECTION ---------------------- */
+
+.info-section{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background: linear-gradient(
+            to right,
+            #000000 0%,
+            #403A3A 50%,
+            #201D1D 75%,
+            #000000 100%
+    );
+}
+
+.info-section .contact-info .btn-cta{
+    display: block;
+    background: var(--primary-green-gradient);
+}
+
+.info-section .info .btn-cta{
+    text-indent: 15px;
+}
+
+.info-section .info{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.info-section .info h2:nth-child(1){
+    margin-bottom: 80px;
+    font-size: 50px;
+}
+
+.info-section .info span:nth-child(1){
+    color: var(--primary-red);
+}
+
+.info-section .info h3{
+    margin-bottom: 15px;
+}
+
+.info-section .info i{
+    color: #2fbf4a;
+    font-size: 35px;
+}
+
+.info-section .info h3{
+    font-weight: normal;
+    color: #dddddd;
+    font-size: 45px;
+}
+
+.info-section .info p{
+    font-size: 14px;
+    color: #dddddd;
+}
+
+
+.info-section .info p:not(:first-of-type) i {
+    color: darkred;
+    font-size: 10px;
+}
+
+.info-section .info:nth-child(2)::after{
+    content: "";
+    position: absolute;
+    width: 1px;
+    background-color: #dddddd;
+    height: 100%;
+    bottom: 0;
+    left: -120px;
+}
+
+
+/* ---------------------------------------------------
+  VERSÃO MOBILE
+
+--------------------------------------------------- */
+@media (max-width: 768px) {
+
+    /* 1. RESET DE ESTRUTURA E LARGURA */
+    .web-application {
+        width: 100%;
+        overflow-x: hidden; /* Mata o scroll lateral */
+    }
+
+    .web-application > *:not(:nth-child(-n + 2)) {
+        margin-top: 40px; /* Reduz o espaçamento gigante entre seções */
+    }
+
+
+    /* 3. HERO (SEÇÃO PRINCIPAL) */
+    .principal {
+        background-size: cover;
+    }
+
+    .principal .glow-line {
+        display: none;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero .hero-image {
+        padding: 0 5px;
+    }
+
+    .hero-content {
+        height: auto; /* Remove o 120vh */
+        min-height: auto;
+        padding: 40px 20px;
+        align-items: center;
+        background: rgba(0, 0, 0, 0.5);
+        margin-bottom: 20px;
+
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+        line-height: 1.2;
+        margin: 40px 0;
+    }
+
+    .hero-content p {
+        margin-left: 0;
+        font-size: 16px;
+    }
+
+    .hero-content .sub-text {
+        margin-left: 0;
+    }
+
+    .btn-cta {
+        position: relative;
+        align-self: center; /* Centraliza o botão */
+        width: 100%; /* Botão mais fácil de clicar no mobile */
+        max-width: 250px;
+        font-weight: lighter;
+    }
+
+    .btn-cta span {
+        font-weight: bold;
+        font-size: 15px;
+    }
+
+    .btn-cta .whatsapp-button {
+        position: absolute;
+        width: 30px;
+        height: auto;
+        left: 30px;
+        bottom: 14px;
+    }
+
+    .hero-image {
+        padding-bottom: 20px;
+    }
+
+    /* 4. STATS (BARRA DE ICONES) */
+    .stats {
+        margin-top: 40px;
+        flex-direction: column;
+        gap: 25px;
+        padding: 30px 20px;
+    }
+
+    .stats .stat-item:nth-child(1)::after,
+    .stats .stat-item:nth-child(2)::after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 30%;
+        width: 40%;
+        height: 1px;
+        background: #dddddd;
+    }
+
+    /* 5. SERVIÇOS (GRID) */
+    .services h2 {
+        font-size: 20px;
+        margin: 20px 5%;
+        display: block;
+        text-align: center;
+    }
+
+    .service-grid {
+        display: flex;
+        flex-direction: column;
+        padding: 0 10px;
+        gap: 20px;
+    }
+
+    .service-card {
+
+        width: 100%;
+    }
+
+    .service-card h3 {
+        padding: 10px 0;
+    }
+
+    .service-card button {
+        width: 100%;
+        max-width: 280px;
+        font-size: 15px;
+        border-radius: 4px;
+    }
+
+
+    /* 6. INFO SECTION (POR QUE PTK?) */
+    .info-section {
+        height: auto;
+        flex-direction: column;
+        padding: 50px 20px;
+
+    }
+
+    .info-section .info {
+        width: 60%;
+    }
+
+    .info-section .info i {
+        font-size: 18px;
+    }
+
+    .info-section .info .whatsapp-button {
+        left: 20px;
+        bottom: 10px;
+        width: 25px;
+        height: auto;
+    }
+
+    .info-section .info h2:nth-child(1) {
+        font-size: 30px;
+        margin-bottom: 30px;
+    }
+
+    .info-section .info h3 {
+        font-size: 18px; /* Diminui para não quebrar linha estranho */
+    }
+
+    .info-section .info:nth-child(2)::after {
+        display: none; /* Remove a linha divisória lateral */
+    }
+
+}
+
+/* Conserto do botão whatsapp que estava sobrepondo o texto */
+@media (max-width: 423px) {
+    .info-section .info .btn-cta{
+        text-indent: 2px;
+    }
+    .info-section .info .whatsapp-button{
+        left: 10px;
+    }
+}
+
+
+@media (max-width: 402px) {
+
+    .info-section{
+        padding-left: 30px;
+    }
+
+    .info-section .info{
+        width: 100%;
+    }
+}

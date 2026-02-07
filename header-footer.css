@@ -1,0 +1,278 @@
+/* ----------------- CABEÇALHO ------------ */
+
+header {
+    display: block;
+    padding: 20px 5%;
+    background: rgba(0,0,0,0.8);
+    z-index: 1000;
+}
+
+/* Esconda o ícone de lista no desktop */
+header nav .bi-list {
+    display: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+.logo{
+    width: 260px;
+    height: auto;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 20px;
+}
+
+.active{
+    background: var(--primary-red);
+    padding: 5px 12px;
+    border-radius: 4px;
+}
+
+/* ------ ASIDE - MENU MOBILE (GAVETA) --------- */
+.menu-gaveta {
+    display: none;    /* Ele não aparece */
+    position: fixed;  /* Ele sai do fluxo da página (não ocupa espaço) */
+    width: 0;         /* Largura zero por segurança */
+    height: 0;        /* Altura zero por segurança */
+    overflow: hidden; /* Garante que nada dentro dele escape */
+}
+
+
+/* ----------------------- RODAPÉ DA PÁGINA --------------------------*/
+
+.footer {
+    background: #0a0a0a;
+    color: #eaeaea;
+    padding: 60px 20px 20px;
+    font-size: 14px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.footer-col {
+    flex: 1;
+}
+
+
+.footer-text {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.footer h4 {
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.footer-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px;
+}
+
+.footer-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.dot {
+    width: 6px;
+    height: 6px;
+    background: #e60000;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.footer-cta {
+    position: relative;
+    font-size: 13px;
+    opacity: 0.85;
+    cursor: pointer;
+}
+
+
+.footer-contact {
+    margin-bottom: 10px;
+}
+
+.footer-contact i {
+    color: #25D366;
+    margin-right: 8px;
+}
+
+.footer-divider {
+    width: 1px;
+    background: rgba(255,255,255,0.1);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.1);
+    margin-top: 40px;
+    padding-top: 15px;
+    text-align: center;
+    font-size: 12px;
+    opacity: 0.7;
+}
+
+
+@media (max-width: 768px) {
+    /* ----------------  MENU MOBILE ------------------ */
+
+    header .logo{
+        max-width: 200px;
+        height: auto;
+    }
+
+    header nav {
+        padding: 5px 10px;
+    }
+
+    header nav i{
+        display: block !important;
+        font-size: 35px;
+        color: #dddddd;
+        font-weight: bold;
+    }
+
+
+    header nav ul {
+        display: none;
+    }
+
+    header nav ul li a {
+        font-size: 14px;
+    }
+
+
+
+    /* 7. FOOTER -  */
+
+    .footer-container {
+        flex-direction: column; /* Empilha as colunas do footer */
+        align-items: center;
+        text-align: center;
+        gap: 20px !important;
+
+    }
+
+    .footer-brand .logo{
+        max-width: 180px;
+        margin-bottom: 20px;
+    }
+
+    .footer-divider {
+        width: 80%; /* Transforma a linha vertical em horizontal */
+        height: 1px;
+        background: #333;
+        margin: 10px 0;
+    }
+
+    .footer-col {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-list {
+        padding: 0;
+        list-style: none;
+    }
+
+    .footer-bottom {
+        font-size: 12px;
+        padding: 20px;
+    }
+
+    /* ASIDE MOBILE - ABRINDO DA ESQUERDA */
+
+    /* GAVETA MOBILE */
+    .menu-gaveta {
+        border-radius: 0 10px 10px 0;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 10vh;
+        left: 0;
+        width: 100%;
+        max-width: 300px;
+        height: 72vh;
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(190, 30, 45, 0.75), rgba(255, 50, 50, 1));
+        z-index: 999;
+        padding: 0;
+        border-right: 2px solid var(--primary-red);
+        transform: translateX(-100%);
+        transition: transform 0.4s ease-in-out;
+        box-sizing: border-box;
+    }
+
+    .menu-gaveta.active {
+        transform: translateX(0);
+    }
+
+    /* Garante que o ícone de toggle fique SEMPRE visível e acima de tudo */
+    #menu-toggle {
+        position: relative;
+        z-index: 1000;
+        font-size: 35px;
+        cursor: pointer;
+    }
+
+    .nav-gaveta{
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+    .nav-gaveta ul {
+        margin: 0;
+        width: 100%;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid white;
+        border-radius: 0 10px 10px 0;
+        gap: 0;
+        text-align: center;
+    }
+    .nav-gaveta ul li {
+        width: 100%;
+        padding: 70px;
+        border-bottom: 1px solid white;
+
+    }
+
+    .nav-gaveta ul li a {
+        display: block;
+        color: white;
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: bold;
+        text-shadow: 1px 1px 1px #000;
+
+
+    }
+}
+
