@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PTK Film - Insulfilm e Envelopamento</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="header-footer.css">
-    <link rel="stylesheet" href="line.css">
-    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./header-footer.css">
+    <link rel="stylesheet" href="./line.css">
+    <link rel="stylesheet" href="./about.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 </head>
 <body>
@@ -18,9 +18,9 @@
                 <img src="./img/logo.svg" alt="logo-marca" class="logo">
             </div>
             <ul>
-                <li><a href="./index.html" class="active">Início</a></li>
+                <li><a href="./index.html">Início</a></li>
                 <li><a href="./services.html">Serviços</a></li>
-                <li><a href="./about.html">Sobre Nós</a></li>
+                <li><a href="./about.html" class="active">Sobre Nós</a></li>
                 <li><a href="./contacts.html">Contato</a></li>
             </ul>
             <i class="bi bi-list" id="menu-toggle"></i>
@@ -38,22 +38,41 @@
     </header>
 
     <main class="about-main">
-        <div class="container-title">
-            <h1 class="center --branco"><span>Sobre Nós</span></h1>
-            <div class="glow-line"></div>
-            <h2 class="center">Elevando o padrão em <span class="--branco">Insufilm</span> para <span class="--branco">veículos e residências</span></h2>
-        </div>
-        <section class="about-section">
-            <p>Somos a PTKFilm, especialistas em Insulfilm automotivo e residêncial.
-                Proteção, conforto e estética para carros e residências, com qualidade e tecnologia avançada.</p>
 
-            <div>
-                <p><i class="bi bi-check-circle-fill"></i> +10 anos de experiência no ramo</p>
-                <p><i class="bi bi-check-circle-fill"></i> +3.500 Carros atendidos</p>
-                <p><i class="bi bi-check-circle-fill"></i> Garantia de Satisfação</p>
+        <div class="circle"></div>
+        <div class="div-conteudo">
 
+            <div class="container-title">
+                <h1 class="center --branco"><span>Sobre</span> Nós</h1>
+                <div class="glow-line"></div>
+                <h2 class="center">Elevando o padrão em <span style="color: #ddd">Insufilm</span> <br>para <span>veículos</span> e <span>residências</span></h2>
             </div>
-        </section>
+            <section class="about-section">
+                <div class="about-images man">
+                    <img src="./img/funcionario.png" alt="">
+                </div>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>Somos a <span style="color: var(--primary-red)">PTK</span><b>Film</b>, especialistas em <span>Insulfilm automotivo</span> e <span>residêncial</span>.
+                            Proteção, conforto e estética para carros e residências, com qualidade e tecnologia avançada.</p>
+                    </div>
+                    <div class="about-publi">
+                        <p><i class="bi bi-check-circle-fill"></i> +10 anos de experiência no ramo</p>
+                        <p><i class="bi bi-check-circle-fill"></i> +3.500 Carros atendidos</p>
+                        <p><i class="bi bi-check-circle-fill"></i> Garantia de Satisfação</p>
+                    </div>
+                </div>
+                <div class="about-images">
+                    <img src="./img/Mockup-Celular.png" alt="">
+                </div>
+            </section>
+            <div class="container-title" style="display: flex; align-items: center; margin: 0; padding: 0;">
+                <h2 style="text-align: center; padding: 0 10px;"><span>Profissionais treinados</span>, atendimento no local e soluções personalizadas<br>
+                    sempre garantindo <span style="color: #fff;">resultados excepcionais</span></h2>
+
+                <button class="btn-cta" style="margin: 50px auto;">Fale Conosco</button>
+            </div>
+        </div>
     </main>
 
     <footer class="footer">
@@ -97,7 +116,7 @@
 
                 <p class="footer-contact">
                     <i class="bi bi-whatsapp"></i>
-                    WhatsApp: (21) 96575-6649
+                    WhatsApp: (21) 99595-0592
                 </p>
 
                 <p class="footer-contact">
