@@ -1,0 +1,123 @@
+.about-contacts{
+    position: relative;
+    width: 100%;
+    background-image: url("../img/background-escuro-fosco.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+}
+
+.contact-page {
+    width: 100%;
+    padding: 100px 5%;
+    background-image: url("../img/background-escuro-fosco.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.contact-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+/* -------- COLUNA ESQUERDA -------- */
+.contact-info {
+    position: relative;
+}
+
+.contact-info .glow-line{
+    left: -170px;
+}
+
+.contact-info h2 {
+    font-size: 36px;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    color: #bdbdbd;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    max-width: 420px;
+}
+
+.contact-socials {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-socials li a {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.contact-socials li a img {
+    width: 28px;
+    height: 28px;
+}
+
+.contact-socials li a:hover {
+    color: #e10600; /* vermelho elegante */
+    transform: translateX(5px);
+}
+
+/* -------- COLUNA DIREITA -------- */
+.contact-image {
+    width: 100%;
+    height: 100vh;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+    background-image: url("../img/madeira-background.png");
+}
+
+.contact-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* -------- RESPONSIVO -------- */
+@media (max-width: 900px) {
+    .contact-info .glow-line{
+        left: 0;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .contact-info {
+        text-align: center;
+    }
+
+    .contact-socials {
+        align-items: center;
+    }
+
+    .contact-socials li a {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 431px) {
+    .contact-info h2{
+        font-size: 1.8rem;
+    }
+}

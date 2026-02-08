@@ -47,3 +47,10 @@ function sendZap(mensagem) {
     // Abre em uma nova aba
     window.open(url, '_blank');
 }
+
+
+/* FUNÇÃO DE REDIRECIONAMENTO */
+
+function redirect() {
+    window.location.href = "./services.html";
+}
