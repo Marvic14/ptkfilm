@@ -116,6 +116,11 @@
         padding-left: 10px;
     }
 
+    .container-title .btn-cta{
+        font-weight: bolder;
+        color: #fff;
+        text-shadow: 0.5px 0.5px 1px #454343;
+    }
     .container-title h1{
         font-size: 2.4rem !important;
     }

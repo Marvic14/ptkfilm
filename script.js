@@ -37,3 +37,13 @@ const swiper = new Swiper(".swiper", {
 });
 
 
+/* FUNÇÃO ZAPI ZAPI */
+
+function sendZap(mensagem) {
+    const telefone = "5521995950592"; // Seu número com DDD
+    // Monta a URL convertendo a mensagem para o formato de link
+    const url = `https://wa.me/${telefone}?text=${encodeURIComponent(mensagem)}`;
+
+    // Abre em uma nova aba
+    window.open(url, '_blank');
+}
