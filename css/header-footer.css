@@ -31,11 +31,17 @@ nav ul {
     list-style: none;
 }
 
+
 nav ul li a {
-    color: white;
+    color: #fff;
     text-decoration: none;
     margin: 0 15px;
     font-size: 20px;
+    transition: transform 0.50s ease;
+}
+
+nav ul li a:hover {
+    font-weight: calc(600);
 }
 
 .active{
@@ -275,8 +281,6 @@ nav ul li a {
         font-size: 20px;
         font-weight: bold;
         text-shadow: 1px 1px 1px #000;
-
-
     }
 }
 

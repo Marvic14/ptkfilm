@@ -9,16 +9,6 @@
     background-size: cover;
 }
 
-.circle{
-    position: absolute;
-    top: 0;
-    left: -180px;
-    background: #000;
-    width: 100vh;
-    height: 60vh;
-    display: inline-block;
-    border-radius: 100%;
-}
 
 
 .about-main .container-title{
@@ -136,10 +126,6 @@
         width: 70% !important;
     }
 
-    .circle{
-        width: 280px;
-        height: 60%
-    }
 
     .about-content .about-text p{
         font-size: 1.5rem;
@@ -178,8 +164,3 @@
     }
 }
 
-@media (max-width: 412px){
-    .circle{
-        display: none;
-    }
-}
