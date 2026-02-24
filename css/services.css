@@ -3,7 +3,7 @@
 
 .services-main{
     color: #dddddd;
-    background: url("../img/background-escuro-fosco.jpg");
+    background: url("../img/background-escuro-fosco.webp");
     padding-top: 100px;
     display: flex;
     flex-direction: column;
@@ -146,10 +146,10 @@
     text-decoration: none;
     border-radius: 10px;
     font-weight: bold;
+    transition: 0.2s;
 }
 
 .btn-slide:hover{
-    background: #00c6ff;
     box-shadow: 0 0 10px #00c6ff,
                 0 0 20px #00c6ff;
     color: #fff;
@@ -175,6 +175,27 @@
     height: 80%;
 }
 
+.swiper-button-prev,
+.swiper-button-next {
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+
+
+    /* 2. Cor de fundo e forma */
+    background: #4aa3ff;
+    color: #000;
+    font-weight: bold;
+    border-radius: 100%;
+
+    /* 3. Sombra para dar profundidade e o aspecto "fofo" */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+
+    /* 5. Transição suave ao passar o mouse */
+    transition: all 0.3s ease;
+}
+
+
 
 /* MOBILE */
 @media (max-width: 768px) {
@@ -196,6 +217,7 @@
         /* 2. Cor de fundo e forma */
         background-color: rgba(0, 224, 254, 0.3);
         border-radius: 100%;
+        color: rgba(0, 224, 254, 0.5);
 
         /* 3. Sombra para dar profundidade e o aspecto "fofo" */
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);

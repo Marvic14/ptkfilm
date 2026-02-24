@@ -1,7 +1,7 @@
 .about-contacts{
     position: relative;
     width: 100%;
-    background-image: url("../img/background-escuro-fosco.jpg");
+    background-image: url("../img/background-escuro-fosco.webp");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -11,7 +11,7 @@
 .contact-page {
     width: 100%;
     padding: 100px 5%;
-    background-image: url("../img/background-escuro-fosco.jpg");
+    background-image: url("../img/background-escuro-fosco.webp");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -83,7 +83,7 @@
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 20px 60px rgba(0,0,0,0.6);
-    background-image: url("../img/madeira-background.png");
+    background-image: url("../img/madeira-background.webp");
 }
 
 .contact-image img {
@@ -94,6 +94,21 @@
 
 /* -------- RESPONSIVO -------- */
 @media (max-width: 900px) {
+    .contact-page{
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .contact-image{
+        width: 100%;
+        border-radius: 0;
+        display: flex;
+        align-items: center;
+    }
+
+    .contact-image img {
+        height: 94vh;
+    }
     .contact-info .glow-line{
         left: 0;
     }
@@ -107,6 +122,9 @@
         text-align: center;
     }
 
+    .contact-info p{
+        padding: 0 20px;
+    }
     .contact-socials {
         align-items: center;
     }

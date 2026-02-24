@@ -1,6 +1,30 @@
 const menuToggle = document.getElementById('menu-toggle');
 const menuGaveta = document.getElementById('menu-mobile');
 
+
+/* Efeito View Transition para mudança de tela */
+document.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', (e) => {
+        // Verifica se é um link interno
+        if (link.hostname === window.location.hostname) {
+            e.preventDefault();
+            const target = link.href;
+
+            // Inicia a transição de visualização
+            if (!document.startViewTransition) {
+                window.location.href = target;
+                return;
+            }
+
+            document.startViewTransition(async () => {
+                // Aqui você pode carregar a página ou simplesmente navegar
+                window.location.href = target;
+            });
+        }
+    });
+});
+
+/* CONTROLA O MENU ASIDE */
 menuToggle.onclick = function() {
     // 1. Abre/Fecha a gaveta
     menuGaveta.classList.toggle('active');
@@ -21,24 +45,9 @@ document.querySelectorAll('.nav-gaveta a').forEach(link => {
     };
 });
 
-//JAVASCRIPT DO SWIPER
-const swiper = new Swiper(".swiper", {
-    loop: true,
-
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-    },
-
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
-});
 
 
 /* FUNÇÃO ZAPI ZAPI */
-
 function sendZap(mensagem) {
     const telefone = "5521995950592"; // Seu número com DDD
     // Monta a URL convertendo a mensagem para o formato de link

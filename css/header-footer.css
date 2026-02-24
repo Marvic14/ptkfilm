@@ -31,23 +31,27 @@ nav ul {
     list-style: none;
 }
 
-
 nav ul li a {
     color: #fff;
     text-decoration: none;
     margin: 0 15px;
     font-size: 20px;
-    transition: transform 0.50s ease;
+    font-weight: 300;
+    display: inline-block;
+    vertical-align: middle;
+    transition: transform 0.5s ease, color 0.3s ease; /* Transição no estado normal */
 }
 
 nav ul li a:hover {
-    font-weight: calc(600);
+    font-weight: 350;
+    transform: translateY(-5px);
 }
 
 .active{
     background: var(--primary-red);
     padding: 5px 12px;
     border-radius: 4px;
+    margin-top: -2px;
 }
 
 /* ------ ASIDE - MENU MOBILE (GAVETA) --------- */
@@ -221,15 +225,15 @@ nav ul li a:hover {
         display: flex;
         flex-direction: column;
         position: absolute;
-        top: 15vh;
+        top: 13vh;
         left: 0;
         width: 100%;
         max-width: 300px;
         height: auto;
-        background-image: url("../img/semi-background-fosco.jpg");
+        background-image: url("../img/semi-background-fosco.webp");
         z-index: 999;
         padding: 0;
-        border-right: 2px solid #dddddd;
+        box-shadow: 1rem  1rem 1rem rgba(0, 0, 0, 0.3);
         transform: translateX(-100%);
         transition: transform 0.4s ease-in-out;
         box-sizing: border-box;
@@ -264,7 +268,7 @@ nav ul li a:hover {
     }
     .nav-gaveta ul li {
         width: 100%;
-        padding: 50px 30px;
+        padding: 63px 30px;
         border-bottom: 1px solid #dddddd;
     }
 
@@ -281,6 +285,13 @@ nav ul li a:hover {
         font-size: 20px;
         font-weight: bold;
         text-shadow: 1px 1px 1px #000;
+    }
+}
+
+/* Teste em telas com altura menor dps talvez apagar */
+@media screen and (max-height: 700px) {
+    .nav-gaveta ul li {
+        padding: 60px 20px;
     }
 }
 
