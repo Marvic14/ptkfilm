@@ -55,7 +55,6 @@ nav ul li a:hover {
     /* O TRUQUE: Usamos background-clip ou reduzimos o padding visualmente */
     /* Mantemos o padding de clique, mas "encolhemos" o fundo com um ajuste fino */
     padding: 6px 12px !important;
-
     /* Se o botão parecer "subir" ou "descer", ajustamos aqui: */
     position: relative;
     top: 10px;
@@ -275,7 +274,7 @@ nav ul li a:hover {
     }
     .nav-gaveta ul li {
         width: 100%;
-        padding: 63px 30px;
+        padding: 44px 30px;
         border-bottom: 1px solid #dddddd;
     }
 
@@ -295,10 +294,4 @@ nav ul li a:hover {
     }
 }
 
-/* Teste em telas com altura menor dps talvez apagar */
-@media screen and (max-height: 700px) {
-    .nav-gaveta ul li {
-        padding: 60px 20px;
-    }
-}
 
