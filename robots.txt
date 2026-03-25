@@ -1,1 +1,4 @@
+User-agent: *
+Allow: /
 
+Sitemap: https://ptkfilm.vercel.app/sitemap.xml
